@@ -1,63 +1,110 @@
-# OUR ÉTOILE — Dashboard Data Mahasiswa & Akademik
+# Dashboard Data Mahasiswa & Akademik
 
-Aplikasi dashboard admin CRUD data mahasiswa menggunakan React 19, Vite, Bootstrap 5, CSS responsif, dan jQuery untuk efek transisi tabel.
+Aplikasi Dashboard Data Mahasiswa & Akademik merupakan aplikasi berbasis web yang dibuat menggunakan React JS dan Bootstrap. Aplikasi ini digunakan untuk mengelola data mahasiswa secara sederhana melalui fitur CRUD (Create, Read, Update, Delete).
 
-## Fitur
-- Ringkasan jumlah mahasiswa Aktif, Tidak Aktif, dan Cuti.
-- Tabel NIM, nama, program studi, IPK, dan status.
-- Pencarian berdasarkan NIM, nama, atau program studi.
-- Filter status mahasiswa.
-- Tambah, edit data/nilai, dan hapus mahasiswa.
-- Validasi kolom wajib, rentang IPK 0.00–4.00, dan NIM duplikat.
-- Export hasil tabel yang sedang ditampilkan ke CSV.
-- Data contoh disimpan sementara di React State (tanpa backend/database).
-- Layout responsif desktop, tablet, dan mobile.
+## 1. Fitur Aplikasi
 
-## Pemetaan enam materi responsi
+- Menampilkan data mahasiswa.
+- Menambahkan data mahasiswa.
+- Mengedit data mahasiswa.
+- Menghapus data mahasiswa.
+- Mencari dan memfilter data mahasiswa.
+- Menampilkan statistik mahasiswa berdasarkan status Aktif, Tidak Aktif, dan Cuti.
+- Menampilkan data akademik mahasiswa, termasuk IPK.
+- Tampilan responsif untuk berbagai ukuran layar.
 
-1. **HTML Dasar & Semantik** — `main`/`header`/`aside`/`section`/`footer`, tabel, form, label, input, select, button, serta dialog modal dengan atribut aksesibilitas.
-2. **CSS Styling & Responsive** — tema warna Our Étoile, layout dashboard, hover/focus, animasi modal, dan media query di `src/styles.css`.
-3. **Bootstrap CSS** — Bootstrap 5 diimpor pada `src/main.jsx`; contoh class yang digunakan: `container-fluid`, `row`, `col-12`, `col-md-4`, `card`, `navbar`, `btn`, `table`, `table-responsive`, `shadow-sm`, `rounded-4`, `align-middle`, dan `text-end`.
-4. **JavaScript Dasar** — variabel, array of objects pada `src/data.js`, function, `map`, `filter`, `some`, operator, dan kondisi `if/else` pada `src/App.jsx`.
-5. **DOM JavaScript & jQuery** — jQuery diimpor dan dipakai untuk efek `hide()`/`fadeIn()` pada wrapper tabel; React tetap mengelola isi tabel.
-6. **React JS (React 19)** — komponen, props, `useState`, `useEffect`, `useMemo`, dan CRUD reaktif.
+## 2. Teknologi yang Digunakan
 
-## Cara menjalankan
-Pastikan Node.js dan npm sudah terpasang.
+- React JS 19
+- Vite
+- JavaScript
+- Bootstrap 5
+- CSS
+- jQuery
 
-```bash
-npm install
-npm run dev
-```
-
-Buka alamat lokal yang ditampilkan Vite di terminal.
-
-Untuk mengecek build produksi:
-
-```bash
-npm run build
-npm run preview
-```
-
-## Struktur folder
+## 3. Struktur Folder
 
 ```text
 dashboard-mahasiswa-akademik/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Sidebar.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── StatCard.jsx
+│   │   ├── StudentTable.jsx
+│   │   └── StudentModal.jsx
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── data.js
+│   ├── styles.css
+│   └── app.css
 ├── index.html
 ├── package.json
-├── README.md
-└── src/
-    ├── App.jsx
-    ├── app.css
-    ├── styles.css
-    ├── data.js
-    ├── main.jsx
-    └── components/
-        ├── Navbar.jsx
-        ├── Sidebar.jsx
-        ├── StatCard.jsx
-        ├── StudentModal.jsx
-        └── StudentTable.jsx
+└── README.md
 ```
 
-Catatan: data akan kembali ke data contoh saat halaman di-refresh karena penyimpanan menggunakan state/array lokal tanpa database backend.
+## 4. Persyaratan
+
+Sebelum menjalankan aplikasi, pastikan perangkat sudah memiliki:
+
+- Node.js dan NPM.
+- Visual Studio Code atau editor kode lainnya.
+- Browser seperti Google Chrome.
+
+## 5. Cara Menjalankan Proyek
+
+**Langkah 1 – Buka folder proyek**
+
+Buka folder `dashboard-mahasiswa-akademik` menggunakan Visual Studio Code.
+
+**Langkah 2 – Buka terminal**
+
+Pilih menu Terminal → New Terminal.
+
+**Langkah 3 – Instal dependensi**
+
+Jalankan perintah berikut:
+
+```bash
+npm install
+```
+
+Tunggu sampai proses instalasi selesai.
+
+**Langkah 4 – Jalankan aplikasi**
+
+Ketik perintah:
+
+```bash
+npm run dev
+```
+
+**Langkah 5 – Buka aplikasi**
+
+Setelah server berhasil dijalankan, terminal akan menampilkan alamat lokal, biasanya:
+
+```text
+http://localhost:5174/
+```
+
+Salin alamat tersebut dan buka melalui browser.
+
+## 6. Cara Menggunakan Aplikasi
+
+1. Buka halaman Dashboard Akademik.
+2. Lihat ringkasan jumlah mahasiswa berdasarkan status.
+3. Gunakan kolom pencarian atau filter untuk menemukan data mahasiswa.
+4. Klik tombol tambah untuk memasukkan data mahasiswa baru.
+5. Klik tombol edit untuk memperbarui data mahasiswa.
+6. Klik tombol hapus untuk menghapus data mahasiswa.
+
+## 7. Penyimpanan Data
+
+Data mahasiswa dikelola menggunakan React State (`useState`). Aplikasi ini belum menggunakan database atau backend. Oleh karena itu, perubahan data hanya tersimpan selama aplikasi berjalan dan akan kembali ke data awal ketika halaman dimuat ulang.
+
+---
+
+**Project:** Dashboard Data Mahasiswa & Akademik  
+**Framework:** React JS 19  
+**Build Tool:** Vite
