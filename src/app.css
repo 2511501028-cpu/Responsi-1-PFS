@@ -1,0 +1,62 @@
+/* Warna kartu status mahasiswa: muted, lembut, dan tetap terbaca. */
+
+.stat-active {
+  background: #718477 !important;
+  border-color: #718477 !important;
+}
+
+.stat-active .stat-top,
+.stat-active .stat-value,
+.stat-active .stat-detail {
+  color: #fffdf7 !important;
+}
+
+.stat-active .stat-icon {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fffdf7;
+}
+
+.stat-inactive {
+  background: #e39a86 !important;
+  border-color: #eadbd6 !important;
+}
+
+.stat-inactive .stat-top,
+.stat-inactive .stat-detail {
+  color: #a66f65 !important;
+}
+
+.stat-inactive .stat-value {
+  color: #855b53 !important;
+}
+
+.stat-inactive .stat-icon {
+  background: #ebdad5;
+  color: #a66f65;
+}
+
+.stat-leave {
+  background: #fff1ca !important;
+  border-color: #e9e1cd !important;
+}
+
+.stat-leave .stat-top,
+.stat-leave .stat-detail {
+  color: #927a47 !important;
+}
+
+.stat-leave .stat-value {
+  color: #79663e !important;
+}
+
+.stat-leave .stat-icon {
+  background: #e9e1cd;
+  color: #a18a55;
+}
+.university-logo {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
